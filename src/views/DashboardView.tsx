@@ -133,7 +133,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* 6 KPI Cards (Section 13) */}
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3 sm:gap-4">
         <KpiCard
-          title="Total Customers"
+          title="Total"
           value={company.customerCount}
           numericTarget={company.customerCount}
           icon={Users}
@@ -178,7 +178,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         />
 
         <KpiCard
-          title="Revenue At Risk"
+          title="REVENUE"
           value={`₹${(company.revenueAtRisk / 100000).toFixed(1)}L`}
           prefix="₹"
           suffix="L"
@@ -191,7 +191,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         />
 
         <KpiCard
-          title="Retention Opp."
+          title="Retention"
           value={`₹${(company.retentionOpportunity / 100000).toFixed(1)}L`}
           prefix="₹"
           suffix="L"

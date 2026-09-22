@@ -94,9 +94,9 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({
           )}
           <button
             onClick={onClose}
-            className="text-xs bg-white border border-coral-200 px-2 py-1 rounded text-gray-500 font-mono"
+            className="p-1.5 bg-white border border-coral-200 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-50 transition-colors"
           >
-            ESC
+            <X className="w-4 h-4" />
           </button>
         </div>
 

@@ -189,7 +189,7 @@ export const LandingView: React.FC<LandingViewProps> = ({
               <p className="text-xl sm:text-2xl font-black text-coral-600">18.4%</p>
             </div>
             <div>
-              <p className="text-[10px] sm:text-[11px] font-bold text-gray-500 uppercase">Revenue at Risk</p>
+              <p className="text-[11px] font-bold text-gray-500 uppercase">REVENUE</p>
               <p className="text-xl sm:text-2xl font-black text-[#252525]">₹18.6L</p>
             </div>
             <div>

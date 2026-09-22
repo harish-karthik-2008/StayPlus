@@ -214,7 +214,7 @@ export const CompaniesView: React.FC<CompaniesViewProps> = ({
                     </div>
                     <div>
                       <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
-                        Revenue At Risk
+                        REVENUE
                       </span>
                       <p className="text-sm font-extrabold text-gray-800">
                         ₹{(comp.revenueAtRisk / 100000).toFixed(1)}L
