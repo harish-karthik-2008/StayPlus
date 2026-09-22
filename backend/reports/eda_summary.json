@@ -1,0 +1,91 @@
+{
+  "overall_churn_rate": 12.1,
+  "total_customers": 3000,
+  "churn_by_plan": [
+    {
+      "plan": "Basic",
+      "count": 1055,
+      "mean": 11.0
+    },
+    {
+      "plan": "Enterprise",
+      "count": 284,
+      "mean": 16.9
+    },
+    {
+      "plan": "Premium",
+      "count": 620,
+      "mean": 11.94
+    },
+    {
+      "plan": "Standard",
+      "count": 1041,
+      "mean": 12.01
+    }
+  ],
+  "churn_by_tenure": [
+    {
+      "tenure_bucket": "0-3m (New)",
+      "count": 593,
+      "mean": 16.36
+    },
+    {
+      "tenure_bucket": "3-12m (Early)",
+      "count": 947,
+      "mean": 14.04
+    },
+    {
+      "tenure_bucket": "1-2yr",
+      "count": 731,
+      "mean": 11.49
+    },
+    {
+      "tenure_bucket": "2-4yr",
+      "count": 556,
+      "mean": 7.37
+    },
+    {
+      "tenure_bucket": "4yr+",
+      "count": 173,
+      "mean": 4.62
+    }
+  ],
+  "churn_by_complaints": [
+    {
+      "complaint_bucket": "0 Complaints",
+      "count": 860,
+      "mean": 8.14
+    },
+    {
+      "complaint_bucket": "1 Complaint",
+      "count": 1137,
+      "mean": 9.59
+    },
+    {
+      "complaint_bucket": "2-3 Complaints",
+      "count": 906,
+      "mean": 18.1
+    },
+    {
+      "complaint_bucket": "4+ Complaints",
+      "count": 97,
+      "mean": 20.62
+    }
+  ],
+  "feature_correlations_with_churn": {
+    "complaint_count": 0.1317,
+    "payment_delay_days": 0.0913,
+    "open_complaints": 0.0898,
+    "payment_failures": 0.0838,
+    "monthly_bill": 0.0442,
+    "monthly_usage_hours": 0.0294,
+    "avg_resolution_days": 0.0176,
+    "age": 0.0101,
+    "plan_changes": -0.0023,
+    "login_frequency": -0.005,
+    "tenure_months": -0.1042,
+    "satisfaction_score": -0.1093,
+    "engagement_score": -0.1748,
+    "usage_change_pct": -0.2186
+  }
+}

@@ -1,32 +1,49 @@
-# React + TypeScript + Vite
+# StayPlus (ChurnGuard AI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Full-stack AI-powered churn intelligence and customer retention platform.
 
-Currently, two official plugins are available:
+## Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```
+StayPlus/
+├── frontend/               # React 19 + TypeScript + Vite + TailwindCSS
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.ts
+└── backend/                # FastAPI + XGBoost/Scikit-learn + SHAP ML Service
+    ├── app/
+    ├── scripts/
+    ├── model/
+    ├── requirements.txt
+    └── Dockerfile
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## Quickstart
+
+### 1. Frontend Setup (Port 5173)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+### 2. Backend Setup (Port 8000)
+
+```bash
+cd backend
+pip install -r requirements.txt
+python -m uvicorn app.main:app --reload --port 8000
+```
+
+- **Health check**: [http://localhost:8000/health](http://localhost:8000/health)
+- **Interactive API Docs (Swagger)**: [http://localhost:8000/docs](http://localhost:8000/docs)
+- **Run tests**: `pytest tests/test_ml_service.py -v`
+
