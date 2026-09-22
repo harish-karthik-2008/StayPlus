@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-coral: #FF7F7F;
+    --dark-coral: #E96B6B;
+    --soft-coral: #FFF0F0;
+    --light-coral-bg: #FFF7F7;
+    --border-coral: #F0DADA;
+    --dark-text: #252525;
+    --secondary-text: #6B7280;
+  }
+
+  * {
+    border-color: #F0DADA;
+  }
+
+  body {
+    background-color: #FFF7F7;
+    color: #252525;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #FCA5A5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E96B6B;
+}
+
+/* Glass & Card Utilities */
+.card-coral {
+  background: #FFFFFF;
+  border: 1px solid #F0DADA;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(233, 107, 107, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-coral:hover {
+  box-shadow: 0 10px 25px -4px rgba(233, 107, 107, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+}
+
+.card-soft {
+  background: #FFF7F7;
+  border: 1px solid #F0DADA;
+  border-radius: 14px;
+}
+
+.badge-coral {
+  background: #FFF0F0;
+  color: #D95353;
+  border: 1px solid #FEDADA;
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.95; }
+}
+
+.animate-subtle-pulse {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
