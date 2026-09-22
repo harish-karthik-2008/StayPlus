@@ -182,8 +182,8 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div className="h-screen w-screen bg-[#FFF7F7] flex overflow-hidden antialiased">
-      {/* Responsive SaaS Sidebar (Permanently fixed viewport height) */}
+    <div className="min-h-screen w-screen bg-[#FFF7F7] antialiased">
+      {/* Fixed Sidebar */}
       <Sidebar
         currentTab={currentTab}
         onTabChange={tab => {
@@ -197,9 +197,15 @@ export const App: React.FC = () => {
         onCloseMobile={() => setIsMobileNavOpen(false)}
       />
 
-      {/* Main Content Area: Fixed layout with internal smooth scrolling */}
-      <div className="flex-1 flex flex-col h-screen min-w-0 overflow-hidden">
-        {/* Topbar: Permanently fixed at the top */}
+      {/* Main Content Area: offset by sidebar width on large screens */}
+      <div
+        className={`flex flex-col min-h-screen transition-all duration-300 ease-in-out ${
+          isSidebarCollapsed
+            ? 'lg:pl-[72px]'
+            : 'lg:pl-64'
+        }`}
+      >
+        {/* Topbar: sticky at top within main content */}
         <Topbar
           onOpenMobileNav={() => setIsMobileNavOpen(true)}
           companies={companies}
@@ -215,8 +221,8 @@ export const App: React.FC = () => {
           notifications={notifications}
         />
 
-        {/* Page Content Container: Scrollable area with smooth scrolling */}
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+        {/* Page Content Container */}
+        <main className="flex-1 p-4 sm:p-6 lg:p-8">
           <div className="max-w-7xl w-full mx-auto">
             {/* If Upload Wizard is active */}
             {isUploadWizardActive ? (

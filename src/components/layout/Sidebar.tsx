@@ -108,31 +108,31 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {/* Sidebar Container */}
       <aside
-        className={`h-screen sticky top-0 z-40 bg-white border-r border-coral-200 flex flex-col shrink-0 transition-all duration-300 ease-in-out ${
-          isCollapsed ? 'w-20' : 'w-64'
+        className={`h-screen fixed top-0 left-0 z-40 bg-white border-r border-coral-200 flex flex-col shrink-0 transition-all duration-300 ease-in-out ${
+          isCollapsed ? 'w-[72px]' : 'w-64'
         } ${
-          isMobileOpen ? 'fixed inset-y-0 left-0 translate-x-0' : '-translate-x-full lg:translate-x-0'
+          isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         } shadow-sm`}
       >
         {/* Brand Header */}
-        <div className="h-16 px-3 border-b border-coral-100 flex items-center justify-between bg-gradient-to-r from-coral-50/50 to-white relative">
+        <div className="h-16 px-3 border-b border-coral-100 flex items-center justify-between bg-gradient-to-r from-coral-50/50 to-white relative shrink-0">
           {isCollapsed ? (
             /* Minimized state: StayPlus Logo cleanly centered and never cut off */
             <div className="w-full flex items-center justify-center relative">
               <button
                 type="button"
                 onClick={() => handleNavClick('landing')}
-                className="hover:scale-105 transition-transform shrink-0"
+                className="hover:scale-105 transition-transform shrink-0 flex items-center justify-center"
                 title="StayPlus Home"
               >
-                <Logo size="md" />
+                <Logo size="sm" />
               </button>
 
               {/* Expand Toggle Chevron positioned cleanly on the right border */}
               <button
                 type="button"
                 onClick={onToggleCollapse}
-                className="absolute -right-5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white border border-coral-300 text-gray-600 hover:text-coral-600 shadow-md flex items-center justify-center transition-all hover:scale-110 z-50 cursor-pointer"
+                className="absolute -right-3.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white border border-coral-300 text-gray-600 hover:text-coral-600 shadow-md flex items-center justify-center transition-all hover:scale-110 z-50 cursor-pointer"
                 title="Expand sidebar"
               >
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -143,7 +143,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <>
               <div
                 onClick={() => handleNavClick('landing')}
-                className="flex items-center gap-3 cursor-pointer select-none min-w-0"
+                className="flex items-center gap-2.5 cursor-pointer select-none min-w-0 flex-1"
               >
                 <Logo size="md" />
 
@@ -160,7 +160,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <button
                 type="button"
                 onClick={onToggleCollapse}
-                className="hidden lg:flex p-1.5 rounded-lg text-gray-400 hover:text-coral-600 hover:bg-coral-50 transition-colors shrink-0"
+                className="hidden lg:flex p-1.5 rounded-lg text-gray-400 hover:text-coral-600 hover:bg-coral-50 transition-colors shrink-0 ml-auto"
                 title="Collapse sidebar"
               >
                 <ChevronLeft className="w-4 h-4" />

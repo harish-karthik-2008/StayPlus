@@ -32,6 +32,8 @@ export default {
         sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
+        'xs': '0 1px 2px rgba(0, 0, 0, 0.05)',
+        '2xs': '0 0.5px 1px rgba(0, 0, 0, 0.04)',
         'soft': '0 2px 10px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05)',
         'card': '0 4px 20px -2px rgba(233, 107, 107, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04)',
         'elevated': '0 10px 30px -4px rgba(233, 107, 107, 0.12), 0 4px 8px -2px rgba(0, 0, 0, 0.04)',
@@ -42,6 +44,10 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(6px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-12px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
         pulseSlow: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0.6' },
@@ -49,7 +55,11 @@ export default {
       },
       animation: {
         fadeIn: 'fadeIn 0.35s ease-out forwards',
+        slideInLeft: 'slideInLeft 0.25s ease-out forwards',
         pulseSlow: 'pulseSlow 2.5s infinite ease-in-out',
+      },
+      screens: {
+        'xs': '375px',
       },
     },
   },

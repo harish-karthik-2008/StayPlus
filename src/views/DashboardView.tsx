@@ -131,7 +131,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* 6 KPI Cards (Section 13) */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3 sm:gap-4">
         <KpiCard
           title="Total Customers"
           value={company.customerCount}
@@ -485,8 +485,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* Table */}
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse">
+        <div className="overflow-x-auto -mx-5 px-5" style={{ WebkitOverflowScrolling: 'touch' }}>
+          <table className="w-full text-left border-collapse" style={{ minWidth: '700px' }}>
             <thead>
               <tr className="border-b border-coral-100 text-[11px] font-bold uppercase tracking-wider text-gray-400 bg-coral-50/40">
                 <th className="py-3 px-4 rounded-l-xl">Customer ID</th>

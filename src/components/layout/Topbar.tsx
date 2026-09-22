@@ -51,7 +51,7 @@ export const Topbar: React.FC<TopbarProps> = ({
   }, []);
 
   return (
-    <header className="h-16 px-4 lg:px-6 bg-white border-b border-coral-200 flex items-center justify-between sticky top-0 z-30 shadow-xs shrink-0 w-full">
+    <header className="h-16 px-4 lg:px-6 bg-white border-b border-coral-200 flex items-center justify-between sticky top-0 z-30 shadow-sm shrink-0 w-full">
       {/* Left: Mobile menu toggle + Company Switcher */}
       <div className="flex items-center gap-3">
         <button
